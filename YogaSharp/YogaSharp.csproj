@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Platforms>x64</Platforms>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
@@ -43,20 +43,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None
-      Condition="Exists('..\yoga\LICENSE')"
-      Include="..\yoga\LICENSE"
-      Pack="true"
-      PackagePath="" />
-    <None
-      Condition="Exists('..\yoga\build\yoga\$(Configuration)\yogacore.dll')"
-      Include="..\yoga\build\yoga\$(Configuration)\yogacore.dll"
-      Pack="true"
-      PackagePath="runtimes\win-x64\native" />
-    <None
-      Condition="Exists('..\yoga\build\yoga\$(Configuration)\yogacore.pdb')"
-      Include="..\yoga\build\yoga\$(Configuration)\yogacore.pdb"
-      Pack="true"
-      PackagePath="runtimes\win-x64\native" />
+    <None Condition="Exists('..\yoga\LICENSE')" Include="..\yoga\LICENSE" Pack="true" PackagePath="">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Condition="Exists('..\yoga\build\yoga\$(Configuration)\yogacore.dll')" Include="..\yoga\build\yoga\$(Configuration)\yogacore.dll" Pack="true" PackagePath="runtimes\win-x64\native">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Condition="Exists('..\yoga\build\yoga\$(Configuration)\yogacore.pdb')" Include="..\yoga\build\yoga\$(Configuration)\yogacore.pdb" Pack="true" PackagePath="runtimes\win-x64\native">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
