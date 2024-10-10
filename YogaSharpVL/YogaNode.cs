@@ -14,4 +14,10 @@ namespace YogaSharpVL
             }
         }
     }
+
+    public static class NodesTest
+    {
+        // Seems to be never picked up if returns unsafe pointer
+        public static unsafe YGNode* Create() => YGNode.New();
+    }
 }

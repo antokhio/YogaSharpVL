@@ -14,14 +14,19 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="KJYsGeIdBYdPXX16v9Srch">
-        <Canvas Id="TAgPleXAAP4M8F9pZe6Vm2" CanvasType="Group" />
+        <Canvas Id="TAgPleXAAP4M8F9pZe6Vm2" CanvasType="Group">
+          <Node Bounds="197,142,53,26" Id="AeHGQXvsbZZPJq98zMUBFy">
+            <p:NodeReference LastCategoryFullName="YogaSharpVL.YogaNode" LastDependency="YogaSharpVL.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="YogaSharpVL" />
+              <CategoryReference Kind="AssemblyCategory" Name="YogaNode" />
+              <Choice Kind="OperationCallFlag" Name="Create" />
+            </p:NodeReference>
+            <Pin Id="NKP6vC6tuomMG4WpOqC5QU" Name="Output" Kind="StateOutputPin" />
+          </Node>
+        </Canvas>
         <Patch Id="RPI3u22mAUGL0R9iYSEGnD" Name="Create" />
         <Patch Id="G0G5c8wRaF0Oxu8NWJmnGE" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="Raql2ljsAx8MxoCvH9U6R9">
           <Fragment Id="M6pXjiocAr9NTwqkzX0gTv" Patch="RPI3u22mAUGL0R9iYSEGnD" Enabled="true" />
           <Fragment Id="UnrWJQA8C5LOvVfJTNDPFQ" Patch="G0G5c8wRaF0Oxu8NWJmnGE" Enabled="true" />
@@ -29,4 +34,5 @@
       </Patch>
     </Node>
   </Patch>
+  <PlatformDependency Id="PLrBE3Cav8XOWYGzhETzoR" Location="./YogaSharpVL/bin/Debug/net8.0/YogaSharpVL.dll" />
 </Document>
